@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #272b30;
+    font-family: "Comfortaa", cursive;
+    min-height: 100%;
+}
+
+header img {
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+nav {
+    margin-inline: auto;
+    background-color: #3a497b;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    margin-top: -30px;
+    z-index: 999;
+}
+
+h5.navbar-brand {
+    font-size: 25px;
+}
+
+li.nav-item {
+    --bs-navbar-hover-color: #09c;
+    --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+    font-size: 12px;
+}
+
+.nav-item .nav-link.active {
+    color: #09c !important;
+    transition: color 0.5s;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nerko One", cursive;
+    color: white;
+}
+
+a.nav-link,
+p,
+span {
+    color: white;
+}
+
+.card {
+    background-color: transparent;
+    filter: grayscale(0.7);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+
+.header span {
+    font-size: 12px;
+}
+
+figcaption p {
+    font-size: 14px;
+    color: #696c6f;
+}
+
+footer span {
+    font-size: 11px;
+    font-weight: 700;
+    background-color: #363739;
+}
+
+.card footer {
+    border-top: 1px solid;
+    margin-inline: -16px;
+}
+
+
+/* *--- DETAILS --- */
+
+.details {
+    background-color: #272729be;
+
+    min-height: 100vh;
+    z-index: 1000;
+}
+
+.details h1 {
+    color: white;
+}
+
+#detailsContent span { 
+    font-size: 14px;
+}
+
+/***** Loader *****/
+.loading {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: #272b30e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: relative;
+ }
+ .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #ff3d00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+ }
+ @keyframes rotation {
+    0% {
+       transform: rotate(0deg);
+    }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
